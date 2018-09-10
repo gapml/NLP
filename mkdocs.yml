@@ -1,0 +1,17 @@
+site_name: Gap-ML
+theme: readthedocs
+repo_url: https://github.com/andrewferlitsch/Gap
+google_analytics: ['UA-124527631-1', 'https://andrewferlitsch.github.io/Gap/']
+nav:
+- Home: index.md
+- About: about.md
+- Organization: org-os.md
+- Quick Start Guide: quick-start-guide.md
+- Tutorials:
+    - Computer Vision: tutorials/computer_vision.md
+    - Natural Language Processing: tutorials/natural_language_processing.md
+- Specifications:
+    - Splitter: specs/splitter_spec.md
+    - Syntax: specs/syntax_spec.md
+    - Segmentation: specs/segmentation_spec.md
+    - Vision: specs/vision_spec.md
