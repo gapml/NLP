@@ -1,7 +1,7 @@
-site_name: Gap-ML
+site_name: GapML NLP
 theme: readthedocs
 repo_url: https://github.com/gapml/NLP
-google_analytics: ['UA-124527631-1', 'https://andrewferlitsch.github.io/Gap/']
+google_analytics: ['UA-124527631-3', 'https://gapml.github.io/NLP/']
 nav:
 - Home: index.md
 - About: about.md

@@ -29,8 +29,8 @@ tests_require=[
 
 package_data={'gapml':['tools/*', 'train/*']}
 
-project_urls={"Documentation": "https://andrewferlitsch.github.io/Gap/",
-              "Source Code": "https://github.com/andrewferlitsch/Gap"}
+project_urls={"Documentation": "https://gapml.github.io/NLP/",
+              "Source Code": "https://github.com/gapml/NLP"}
 
 #https://pypi.org/pypi?%3Aaction=list_classifiers
 classifiers=[
@@ -51,13 +51,13 @@ classifiers=[
     'Programming Language :: Python :: 3.7']
 
 setup(
-    name='gapml',
+    name='gapmlNLP',
     version='0.9.3',
     description='NLP and CV Data Engineering Framework',
     author='Andrew Ferlitsch',
     author_email='aferlitsch@gmail.com',
     license='Apache 2.0',
-    url='https://github.com/andrewferlitsch/Gap',
+    url='https://github.com/gapml/NLP',
     project_urls=project_urls,
     long_description=long_description,
     packages=find_packages(exclude=["*.tests", "*.tests.*", "tests.*", "tests"]),
