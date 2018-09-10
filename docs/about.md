@@ -1,8 +1,8 @@
 # Gap  
-# Natural Language Processing for PDF/TIFF/Image Documents and Computer Vision for Images
+# Natural Language Processing for PDF/TIFF/Image Documents
 
 ## Framework
-The Gap NLP/CV open source framework provides an easy to get started into the world of machine learning for your unstructured data in PDF documents, scanned documents, TIFF facsimiles,  camera captured documents, and computer vision for your image data.
+The Gap NLP open source framework provides an easy to get started into the world of machine learning for your unstructured data in PDF documents, scanned documents, TIFF facsimiles,  camera captured documents, and computer vision for your image data.
 
 +	Automatic OCR of scanned and camera captured images.  
 +	Automatic Text Extraction from documents.  
@@ -62,18 +62,6 @@ Dates, numbers and units of measure can be converted to either USA Standard or I
 
 Along with the builtin stemmer and lemmatizer, the module can optionally be configured to use the NLTK (open source) stemmers, lemmatizer and parts of speech annotations.
 
-## VISION
-
-The vision module provides preprocessing and storage of images into machine learning ready data. The module supports a wide variety of formats: JPG, PNG, BMP, and TIF, and number of channels (grayscale, RGB, RGBA).
-
-Images can be processed incrementally, or in batches.  Preprocessing options include conversion to grayscale, resizing, normalizing and flattening. The machine ready image data is stored and retrievable from high performance HD5 file.
-
-The HD5 storage provides fast and random access to the machine ready image data and corresponding labels.
-
-Preprocessing can be done either synchronously or asynchronously, where in the latter case an event handler signals when the preprocessing has been completed and the machine ready datta is accessible.
-
-Further disclosure requires an Non-Disclosure Agreement.
- 
 ## MODULES
 
   ![modules](img/modules.png)

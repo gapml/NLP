@@ -1,7 +1,7 @@
 """
 Copyright, 2018(c), Andrew Ferlitsch
 """
-from gapml.segment import Segment
+from gapnlp.segment import Segment
 import unittest
 import pytest
 import os

@@ -1,8 +1,8 @@
 """
 Copyright, 2018(c), Andrew Ferlitsch
 """
-from gapml.splitter import Document, Page
-from gapml.pdf_res import PDFResource
+from gapnlp.splitter import Document, Page
+from gapnlp.pdf_res import PDFResource
 import unittest
 import pytest
 import os

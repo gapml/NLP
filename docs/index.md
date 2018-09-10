@@ -27,17 +27,6 @@ The Gap NLP/CV data engineering framework provides an easy to get started into t
   - Asynchronous processing of documents.
   - Automatic generation of NLP machine learning ready data.
 
-*CV*
-
-  - Automatic storage and retrieval with high performance HDF5 files.
-  - Automatic handling of mixed channels (grayscale, RGB and RGBA) and pixel size.
-  - Programmatic control of resizing.
-  - Programmatic control of conversion into machine learning ready data format: decompression, normalize, flatten.
-  - Programmatic control of minibatch generation.
-  - Programmatic control of image augmentation.
-  - Asynchronous processing of images.
-  - Automatic generation of CV machine learning ready data.
-
 The framework consists of a sequence of Python modules which can be retrofitted into a variety of configurations. The framework is designed to fit seamlessly and scale with an accompanying infrastructure. To achieve this, the design incorporates:
 
   - Problem and Modular Decomposition utilizing Object Oriented Programming Principles.
@@ -101,7 +90,7 @@ The Gap framework is supported on Windows, MacOS, and Linux. It has been package
 To install GapML via setup.py:
 
   1. clone from the Github repo.  
-      + `git clone git@github.com:andrewferlitsch/Gap.git`
+      + `git clone https://github.com/gapml/NLP.git`
 
   2. install the GapML setup file. 
       + `python setup.py install`
@@ -149,15 +138,6 @@ Along with the builtin stemmer and lemmatizer, the module can optionally be conf
 
 The [**segmentation**](specs/segmentation_spec.md) module was introduced as part of the pre-launch of Gap v0.9. It currently is in the demonstration stage, and not ready for commericial-product code ready. The segmentation module examines the whitespace layout of the text to identify 'human' layout of text and corresponding context, such as paragraphs, headings, columns, page numbering, letterhead, etc. The text is then separated into segments based on recognized layout and within the segments the text is NLP preprocessed. In this mode, the NLP preprocessed text is hierarchical. At the top level are the segments, with corresponding segment tag, and the child is the NLP preprocessed text within the segment.
 
-#### <span style='color: saddlebrown'>VISION</span>
-
-The [**splitter**](specs/vision_spec.md) module is the CV entry point into the pipeline. It consists of a Images and Image class. The Images class handles the storage and (random access) batch retrieval of CV machine learning ready data, using open source openCV image processing, numpy high performance arrays (tensors) and HDF5 high performance disk (tensor) access. The Image class handles preprocessing of individual images into CV machine learning ready data. The batch and image preprocessing can be done synchronously or asynchronously, where in the latter case an event handler signals when the preprocessing of an image or batch has been completed and the machine learning ready data is accessible.
-
-The vision module handles:
-
-  - Mixed image size, format, resolution, number of channels
-  - Decompression, Resizing, Normalizing, Flattening
-
 ## User's Guide
 
 The User's (Programming) Quick Start Guide can be found [here](quick-start-guide.md)
@@ -186,7 +166,6 @@ The following are the pre-built automated unit tests, which are located under th
     page_test.py        # Tests the Page Class in the Splitter Module
     words_test.py       # Tests the Words and Addresses Class in the Syntax Module
     segment_test.py     # Tests the Segment Class in the Segment Module
-    image_test.py       # Tests the Image and Images Class in the Vision Module
 
 The automated tests are executed as follows:
 
@@ -194,7 +173,6 @@ The automated tests are executed as follows:
     pytest -v page_test.py
     pytest -v words_test.py
     pytest -v segment_test.py
-    pytest -v image_test.py
 
 #### Code Coverage
 
@@ -215,7 +193,3 @@ Testing with code coverage is executed as follows:
     pytest --cov=address words_test.py
 
         Statements=456, Missed=60, Percent Covered: 90%
-
-    pytest --cov=vision image_test.py
-
-        Statements=456, Missed=60, Percent Covered: 89%
