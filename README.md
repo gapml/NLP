@@ -78,12 +78,12 @@ The Gap framework is supported on Windows, MacOS, and Linux. It has been package
   1. install [miniconda](https://conda.io/miniconda.html)
 
   2. (optional)  
-      + Create an environment with: `conda create -n gap python==3.7 jupyter`  
+      + Create an environment with: `conda create -n gap python==3.6 jupyter`  
       + Activate: `source activate gap`
       + Deactivate: `source deactivate`
 
   3. install GapML:  
-      + `pip install gapml`
+      + `pip install gapnlp`
 
       Dependecies if you are on **Linux** or **Mac**:  
       + Tesseract:    `conda install -c conda-forge tesseract`  
@@ -197,6 +197,10 @@ The following are the pre-built automated unit tests, which are located under th
 
 The automated tests are executed as follows:
 
+  1. From directory root enter `cd tests`
+
+  2. To run tests with coverage:
+
     pytest -v document_test.py
     pytest -v page_test.py
     pytest -v words_test.py
@@ -208,6 +212,10 @@ The automated tests are executed as follows:
 Information on the percent of code that is covered (and what source lines not covered) by the automated tests is obtained using pytest-cov. This version of pytest is installed using pip:
 
     pip install pytest-cov
+
+  1. From directory root enter `cd tests`
+
+  2. To run tests with coverage:
 
 Testing with code coverage is executed as follows:
 
